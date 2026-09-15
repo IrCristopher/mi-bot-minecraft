@@ -1,14 +1,14 @@
 const mineflayer = require('mineflayer');
 
 const bot = mineflayer.createBot({
-  host: 'TU_IP_DE_ATERNOS.aternos.me', // Cámbialo por tu IP
-  port: 25565,
+  host: '127.0.0.1', // Dirección local de tu computadora
+  port: 52410,       // Cambia esto por el puerto que te dé Minecraft al Abrir en LAN
   username: 'GeminiBot'
 });
 
 bot.on('spawn', () => {
-  console.log('¡El bot ha entrado al servidor!');
-  bot.chat('¡Hola! Ya estoy listo para ayudarte.');
+  console.log('¡El bot ha entrado a tu mundo local!');
+  bot.chat('¡Hola! Ya llegué a tu mundo.');
 });
 
 bot.on('chat', (username, message) => {
